@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinando CondicionaisJs Compostas</title>
+</head>
+<body>
+    <h1>Tu Nacionalid </h1>
+    <p>
+        País: <input type="text" name="país" id="país">
+        <input type="button" value="verificar" id="but">
+            <div id="res">
+            </div>
+    </p>
+    <script>
+        var b = document.getElementById('but')
+        b.addEventListener('click', conferir )
+
+        function conferir(){
+            var país = document.getElementById('país')
+            var p = String(país.value)
+            
+            var res = document.getElementById('res')
+
+            res.innerHTML=`<p>Bem-vindo ao nosso site !!!</p>`
+            res.innerHTML += `<p> Seu país é <strong>${p.toUpperCase()}</strong></p>`
+            if (p == 'Brasil' || p == 'brasil') { 
+                res.innerHTML += '<p> Você é brasileiro </p>'
+                } else { res.innerHTML += '<p> Você é gringo'
+                
+            }
+            
+        }
+    </script>
+</body>
+</html>

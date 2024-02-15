@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinando CondicionaisJs</title>
+</head>
+<body>
+    <h1>Sistema de Multas - DETRAN </h1>
+    <input type="number" name="num" id="num">
+    <input type="button" value="verificar" id="but">
+    <div id="res">
+        
+    </div>
+
+    <script>
+    var b = document.getElementById('but')
+    b.addEventListener('click', calcule)
+    
+    function calcule() {
+            
+            var num = document.getElementById('num')
+            var num1 = Number(num.value)
+            var res = document.getElementById('res')
+            res.innerHTML =`<p>Sua velocidade foi de <strong>${num1}Km/h</strong> </p>`
+            if(num1 > 60){
+                res.innerHTML += `<p>Voce tem noção que dirigiu à <strong> ${num1}Km/h ??? </strong>, você é uma pessoa irresponsável, e será <strong>MUTADO(A)</strong> por excesso de velocidade !!!</p>`
+            }
+            res.innerHTML += '<p> Diriga sempre com segurança</p>'
+            res.innerHTML += '<p>O trânsito agradece!!!</p>'
+        }
+
+        
+
+    </script>
+</body>
+</html>

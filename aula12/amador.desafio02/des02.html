@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 02 Js</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Calculadora de identidade</h1>
+    </header>
+    <section>
+        <div >
+        <p><strong>Ano de Nascimento:</strong> <input type="number" name="num" id="ano" min="1900" max="2024">
+        </p>
+        
+        <p>
+            <strong>Sexo:</strong> <input type="radio" name="radsex" id="mas" >
+            <label for="mas">Masculino</label>
+                    <input type="radio" name="radsex" id="fem">
+            <label for="fem">Feminino</label>
+                    <input type="radio" name="radsex" id="out">
+            <label for="out">Outro</label>
+        </p>
+        <p>
+            <strong>Nacionalidade:</strong> <input type="radio" name="radnac" id="bra">
+            <label for="bra">Brasileiro</label>
+                            <input type="radio" name="radnac" id="gri">
+            <label for="gri">Estrangeiro</label>
+        </p>
+        <p><input type="button" value="Verificar" id="but" onclick="clicar()">
+        </p>
+        </div>
+        
+        <div id="res">
+            Preencha os dados acima para ver o resultado!
+        </div>
+    </section>
+    <footer>
+        <p>&copy; Curso em Video</p>
+    </footer>
+    <script src="java.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+body {
+    background-color: rgb(93, 99, 226);
+}
+header{
+    color: white;
+    font: normal 13pt Arial;
+    text-align: center;
+    text-shadow: 3px 3px 9px rgba(0, 0, 0, 0.395);
+}
+
+section {
+    background-color: white;
+    border-radius: 10px;
+    width: 450px;
+    margin: auto;
+    padding: 15px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.552);
+   
+}
+footer{
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+.msg{
+    
+    font: normal 13pt Arial;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 5px 5px;
+    font-weight: bolder;
+
+}
+#res{
+    font: normal 13pt Arial red;
+
+    font-weight: bolder;
+    margin: center;
+}
+#ini{
+    width: 100px;
+}
+#fim{
+    width: 100px;
+}
+#pas{
+    width: 100px;
+}
+#tabuada{
+    margin: center;
+}
+

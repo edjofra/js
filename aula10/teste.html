@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando coisas no DOM</title>
+    <style>
+        body {
+            background-color: aquamarine;
+            text-align: justify;
+            padding: 10px 10px;
+            font-size: 15px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM</h1>
+    <h2>Conceito</h2>
+    <p name="pripag"> O DOM siguinifica Document Obejct Model, bascimamente permite que acesse determinadas áreas do documento html, permitindo assim, fazer mudanças interativas, por exemplo</p>
+    <p id="segpag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae cumque ducimus praesentium sapiente vel, voluptatem vitae ipsam asperiores, suscipit dicta quaerat commodi laudantium quibusdam accusantium fuga tenetur debitis. Atque, voluptas.</p>
+    <h2 class="tito2">Uso</h2>
+    <p class="ppp2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam molestias repellat, omnis libero quo sint illo, officia, atque iusto in deleniti aperiam. Harum nam perspiciatis alias suscipit provident. Perferendis, ullam!</p>
+    <p class="ppp2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia tenetur excepturi ratione earum aut veritatis unde eligendi eum explicabo quae animi optio saepe exercitationem ullam necessitatibus, dignissimos hic minus maxime.</p>
+    <div id="div1">
+        É possivel saber mais, atraves de platafomras especializaddas, ou vide aulas,  ipsum dolor sit, amet consectetur adipisicing elit. Aut et adipisci similique incidunt error deserunt architecto perspiciatis ad velit! Nobis doloremque, odio quae id animi nisi consequuntur qui ut quam?
+    </div>
+    <hr>
+    <script>
+        var hh2 = window.document.getElementsByTagName('h2')[0]                          
+        hh2.style.color = 'red';
+
+
+        var pp2 = window.document.getElementById('segpag')
+        window.document.write(`No segundo paragrafo do Tópico Conceito, esta éscrito ` + pp2.innerText) 
+        pp2.style.color = 'blue'
+
+
+        var pp1 = window.document.getElementsByName('pripag')[0]
+        pp1.style.background = 'blue'
+
+        var tit2 = window.document.getElementsByClassName('tito2')[0]
+        tit2.style.color = 'purple'
+
+        var d = window.document.querySelector('#div1')
+        d.style.color = 'green'
+
+        var p = window.document.querySelectorAll('.ppp2')[0]
+        
+        p.style.color = 'white'
+
+        
+        
+    </script>
+</body>
+</html>

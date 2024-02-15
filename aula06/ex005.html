@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Passos com o DOM</title>
+    <style>
+
+        body {
+        
+        background-color: rgb(173, 96, 240);
+        color: white;
+        font: normal 15pt Arial;
+
+        }
+    </style>
+</head>
+<body>
+    <h1> Iniciando estudos em <abbr title="Document Object Model">DOM</abbr></h1>
+    <p id="pag1">
+        Aqui vai o resultado
+    </p>
+    <p name="pag2">
+        Aprendendo a usar o <strong>DOM</strong> em JavaScript.
+    </p>
+    <div id="clic">Clique em mim</div>
+
+  
+
+    <script>
+        var corpo = window.document.body
+        
+        corpo.style.background = 'black';
+        
+
+        var xx = document.getElementsByTagName('h1')[0]
+        xx.style.color= 'blue'
+
+        /*  estamos usando get byTag ou Marca,
+        note que o Element está no plural, logo deverá haver []pra indicar qual elemento especifico estamo acessando:
+        0 é o primeiro; 1 é o segundo, 2 é o terceiro ...*/
+
+        var p1 = window.document.getElementsByTagName("p")[1]
+
+        window.document.write(`No primeiro paragrafo está escrito: ${p1.innerText}`)
+        p1.style.color = 'red'
+
+        /* Agora estamos usando get byId*/
+        var c = window.document.getElementById('clic')
+        c.style.color = 'purple'
+        c.innerText = 'Mude now'
+        /* Agora estamos usando get byName, tmb plural, logo []*/
+        var d = window.document.getElementsByName('pag2')[0]
+        d.style.background = 'green'
+
+        /* QuerySelector() mais recomendado, basicamente usa a sintaxe do CSS, Id= #, e Class=., bem mais prático */
+        
+        var e = window.document.querySelector('#pag1')
+        e.style.color = 'yellow'
+
+    </script>
+    
+</body>
+</html>

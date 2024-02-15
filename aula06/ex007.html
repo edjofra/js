@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini calculator DOM</title>
+    <style>
+        input#n1{
+            width: 100px;
+            height: 100px;
+        }
+        input#n2{
+            width: 100px;
+            height: 100px;
+        }
+        input#bot{
+            width: 100px;
+            height: 100px;
+            background-color: white;
+        }
+        div#res{
+            padding-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando dois Valores</h1>
+    <input type="number" id="n1" name="n1"> +
+    <input type="number" id="n2" name="n2">
+    <input type="button" value="Somar" id="bot">
+
+    <div id="res">
+        Resultado:
+    </div>
+
+    <script>
+        
+        var b = document.getElementById('bot')
+        b.addEventListener('click', somar)
+        b.addEventListener('mouseleave',tirar)
+        
+        function somar() {
+            var n1 = document.getElementById('n1')
+            var n2 = document.querySelector('input#n2')
+            var num1 = Number(n1.value)
+            var num2 = Number(n2.value)
+            var s = num1 + num2
+            
+            var res = document.querySelector('div#res')
+            res.innerHTML = `A soma de ${num1} e ${num2} é igual a <strong>${s}</strong>`
+            b.style.background='red'
+
+        }
+        function tirar(){
+            b.style.background= 'none'
+        }
+    </script>
+</body>
+</html>
