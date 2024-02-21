@@ -1,56 +1,57 @@
 //num1.style.background = 'pink'
 
-var num1 = document.querySelector('#num1')
-var num1 = document.querySelector('#num2')
-
-var r = document.querySelector('#r')
-
+    
+var res = document.querySelector('div#res')
 
 function soma(){
-    if(num1.value == 0 || num2.value == 0){
-        window.alert('Preencha os dois número')
-    } else{
-        var n1 = Number(num1.value)
-        var n2 = Number(num2.value)
-
-        var so = n1 + n2
-        r.innerHTML=`${so}`
+    var n1 = document.getElementById('num1')
+    var n2 = document.querySelector('input#num2')
+    var n1 = Number(n1.value)
+    var n2 = Number(n2.value)
+    var s = n1 + n2
+    
+    res.innerHTML = `A soma de ${n1} e ${n2} é igual a <strong>${s}</strong>`
+   
     }
    
-}
-
 function subt(){
-    if(num1.value == 0 || num2.value == 0){
-        window.alert('Preencha os dois número')
-    } else{
-        var n1 = Number(num1.value)
-        var n2 = Number(num2.value)
+    var n1 = document.getElementById('num1')
+    var n2 = document.querySelector('input#num2')
+    var n1 = Number(n1.value)
+    var n2 = Number(n2.value)
+    var s = n1 - n2
+    
+    res.innerHTML = `A subtração de ${n1} e ${n2} é igual a <strong>${s}</strong>`
+    
 
-        var su = n1 - n2
-        r.innerHTML=`${su}`
     }
-}
 
 function mult(){
-    if(num1.value == 0 || num2.value == 0){
-        window.alert('Preencha os dois número')
-    } else{
-        var n1 = Number(num1.value)
-        var n2 = Number(num2.value)
+    var n1 = document.getElementById('num1')
+    var n2 = document.querySelector('input#num2')
+    var n1 = Number(n1.value)
+    var n2 = Number(n2.value)
+    var s = n1 * n2
+    
+    res.innerHTML = `A multiplicação de ${n1} e ${n2} é igual a <strong>${s}</strong>`
+    
 
-        var mu = n1 * n2
-        r.innerHTML=`${mu}`
     }
-}
 
 function divi(){
-    if(num1.value == 0 || num2.value == 0){
-        window.alert('Preencha os dois número')
-    } else{
-        var n1 = Number(num1.value)
-        var n2 = Number(num2.value)
+    var n1 = document.getElementById('num1')
+    var n2 = document.querySelector('input#num2')
+    var n1 = Number(n1.value)
+    var n2 = Number(n2.value)
+    var s = n1 / n2
+    
+    res.innerHTML = `A divisão de ${n1} e ${n2} é igual a <strong>${s}</strong>`
+    
 
-        var di = n1 / n2
-        r.innerHTML=`${di}`
     }
+   
+function limpar(){
+    res.innerHTML= 'Resultado: ' 
 }
+  
+
