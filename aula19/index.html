@@ -1,11 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TESTES CARAI</title>
+    <title>CARDAPIO</title>
+    <link rel="stylesheet" href="style.css">
+
+   
+    
 </head>
 <body>
+    <header>
+    <img src="imagens/emojione-monotone_pot-of-food.png" alt="emoji-head" id="emoji">
+        <h1>Temperos do Cerrado</h1>
+    </header>
+    <div id="pesquisar">
+        <img src="imagens/lupa.png" alt="Pesquise" id="lupa">
+        <input type="search" name="pesq"id="pesq"  placeholder="Pesquise aqui">
+    </div>
+   <nav id="lista-menu">
     
+        <!-- <a href="#" class="item">Espetos</a>-->
+       
+   </nav>
+   <main>
+        <section>
+            <h2>Recomendações do chefe</h2>
+            
+                <div id="lista-recomendados" class="recomendados">
+                    <!-- <div class="card-recomendados">
+                        <img src="imagens/q1-esp.fra.bac.png" alt="q1-eps-frang" class="img-recomendados">
+                        <p class="texto-recomendados">Espeto de frango com bacon</p>
+                        <p class="preco-recomendados">R$29,90</p>
+                    </div> -->
+                   
+                </div>
+           
+
+        </section>    
+       
+        <section>
+            <h2>Espetos</h2>
+            <div class="reta">
+                <div class="imgR">
+                    <img src="imagens/espeto-picanha.png" alt="esp-pic" >
+                </div>
+                <div class="info">
+                    <h3>Espeto de picanha</h3>
+                    <p  class="desc">Espeto de 200g, Proção de arroz, Farofa, Mandioca cozida </p>
+                    <p class="price">R$ 39,90</p>
+                </div>
+            </div>
+            <div class="reta">
+                <div class="imgR">
+                    <img src="imagens/espeto-contra.png" alt="esp-con">
+                </div>
+               <div class="info">
+                   <h3>Espeto de contra-filé</h3>
+                        <p class="desc">
+                            Espeto de 200g, Proção de arroz, Farofa,
+                            Mandioca cozida
+                        </p>
+                   
+                    <p class="price">R$ 29,90</p>
+               </div>
+            </div>
+            
+            <div class="reta">
+                <div class="imgR">
+                    <img src="imagens/espeto-frango.png" alt="esp-fra">
+                </div>
+                <div class="info">
+                    <h3>Espeto de frango com bacon</h3>
+                    <p class="desc">
+                        Espeto de 200g, Proção de arroz, Farofa,
+                        Mandioca cozida
+                    </p>
+                    
+                    <p class="price">R$ 29,90</p>
+                </div>
+            </div>
+        </section>
+            <ul id="lista">
+            </ul>
+
+        
+   </main>
+   
+   <footer>
+<input type="button" value="UP" id="suba">
+<img src="imagens/subir.png" alt="botao-subir" id="img-up">
+   </footer>
+   <div id="buta">
+    <input type="button" value="GO" id="but" onclick="imprimir()">
+   </div>
+   
+    <script src="exemplo.js"></script>
 </body>
 </html>
