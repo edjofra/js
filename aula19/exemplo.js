@@ -421,106 +421,156 @@ var categorias = [
     }
 ];
 
-init()
+/* DUMB WAY - CRIANDO os objetos dentro do JavaScript, p/ exibi-los no html, aproveitando os CSS originais 
 
-function init(){
-    window.onload = function () {
-        listarCategoria()
-        criarCardProdutosRecomendados(produtos[10])
-    }
-}
-
-
-//CRIANDO os objetos dentro do JavaScript, p/ exibi-los no html, aproveitando os CSS originais 
-
-// function imprimir(){
-//  var but = document.querySelector('input#but')
+ function imprimir(){
+  var but = document.querySelector('input#but')
  
-//  but.style.background = 'red'
-//  var lista = document.querySelector('ul#lista')
-//  lista.innerHTML=`<h2>Listando Tudo</h2>`
+  but.style.background = 'red'
+  var lista = document.querySelector('ul#lista')
+  lista.innerHTML=`<h2>Listando Tudo</h2>`
  
-// for( index in produtos){
+ for( index in produtos){
     
-//     var produto = produtos[index]
+     var produto = produtos[index]
 
     
-//     var item = document.createElement('li')
-//     item.setAttribute('class','reta')
-//     lista.appendChild(item)
+     var item = document.createElement('li')
+     item.setAttribute('class','reta')
+     lista.appendChild(item)
     
    
-//         var divI = document.createElement('div')
-//         divI.setAttribute('class', 'imgR')
-//         item.appendChild(divI)
+        var divI = document.createElement('div')
+         divI.setAttribute('class', 'imgR')         
+         item.appendChild(divI)
 
-//             var imgR = document.createElement('p')
-//             imgR.setAttribute("class", "imR")
-//             divI.appendChild(imgR)
-//            imgR.style.backgroundImage=`url('imagens/${produto.imagem}')` 
+             var imgR = document.createElement('p')
+             imgR.setAttribute("class", "imR")
+             divI.appendChild(imgR)
+            imgR.style.backgroundImage=`url('imagens/${produto.imagem}')` 
            
-//         var divInfo = document.createElement('div')
-//         divInfo.setAttribute("class", "info")
-//         item.appendChild(divInfo)
+         var divInfo = document.createElement('div')
+         divInfo.setAttribute("class", "info")
+         item.appendChild(divInfo)
 
-//             var h3 = document.createElement('h3')
-//             divInfo.appendChild(h3)
-//             h3.innerHTML=`${produto.nome}`
+             var h3 = document.createElement('h3')
+             divInfo.appendChild(h3)
+             h3.innerHTML=`${produto.nome}`
 
-//             var de = document.createElement('p')
-//             de.setAttribute("class", "desc")
-//             divInfo.appendChild(de)
-//             de.innerHTML=`${produto.descricao}`
+             var de = document.createElement('p')
+             de.setAttribute("class", "desc")
+             divInfo.appendChild(de)
+             de.innerHTML=`${produto.descricao}`
 
-//             var pr = document.createElement('p')
-//             pr.setAttribute("class", "price")
-//             divInfo.appendChild(pr)
-//             pr.innerHTML=`R$ ${produto.preco}`
+             var pr = document.createElement('p')            
+             pr.setAttribute("class", "price")
+             divInfo.appendChild(pr)
+             pr.innerHTML=`R$ ${produto.preco}`
 
 
-//     }
+     }
 
-// }
-// listaMenu.style.backgroundColor = 'pink';
+ } 
 
-//Listas
-function listarCategoria(){
+*/
+
+/* criei os items do menu com uma function, em seguida preenchi os valores com os dados do Js usando uma fuction com laço para listar todos os objs do array*/
+
+function criarCardCategoria(aaa){
+    /*Jeido dificil via create elemente:
+         var listaMenu = document.getElementById('lista-menu')
+         var itemMenu = document.createElement('a')
+         itemMenu.setAttribute("class","item")
+         itemMenu.innerHTML=`${aaa.nome}`
+         listaMenu.appendChild(itemMenu)
+    */
+    var listaMenu = document.getElementById('lista-menu')
+    listaMenu.innerHTML += `<a href="#" class="item">${aaa.nome}</a> `
+
+}
+
+function mostrarTodosCardCategoria(){
     for(index in categorias){
-        var cat = categorias[index]
-        criarCardCategoria(cat)
+        var bbb = categorias[index]
+        criarCardCategoria(bbb)
     }
 }
+mostrarTodosCardCategoria()
 
-//Todos os cards
-function criarCardProdutosRecomendados(produt){
-    var listaRecomendados = document.querySelector('#lista-recomendados')
-    var preco = formatarPreco(produt.preco)
-    listaRecomendados.innerHTML= `
+/* criei um card com os dados do Js; evitei o uso desnecessãiro de 'appendChild' simplesmente compiando as tags do html no 'innerHTML'  */
+
+function cardProdutosRecomendados (prato) {
+
+    var recomendados = document.querySelector('#lista-recomendados')
+    recomendados.innerHTML+=`
     <div class="card-recomendados">
-        <img src="imagens/${produt.imagem}" alt="${produt.nome}" class="img-recomendados">
-        <p class="texto-recomendados">${produt.nome}</p>
-        <p class="preco-recomendados">${preco}</p>
+        <img src="imagens/${prato.imagem}" alt="${prato.nome}" class="img-recomendados">
+        <p class="texto-recomendados">${prato.nome}</p>
+        <p class="preco-recomendados">${prato.preco}</p>
     </div>
-   `
+    `
 }
 
-function criarCardCategoria(categoria){
 
-    var listaMenu = document.getElementById('lista-menu')
-    var itemMenu = document.createElement('a')
-    itemMenu.setAttribute("class","item")
-    // itemMenu.setAttribute("href",`${categoria.codigo}`)
-    itemMenu.innerHTML=`${categoria.nome}`
-    listaMenu.appendChild(itemMenu)
-
+function listandoTodosProdutosRecomendados (){
+    for (key in produtos){
+    var produto = produtos[key]
+        if(produto.promocao == true ){
+    cardProdutosRecomendados (produto)
+        }
+    }
+    
 }
+listandoTodosProdutosRecomendados ()
 
-//formatar
-function formatarPreco(preco){
+
+
+
+// init()
+
+// function init(){
+//     window.onload = function () {
+//         listarCategoria()
+//         criarCardProdutosRecomendados(produtos[10])
+//     }
+// }
+// //Listas
+// function listarCategoria(){
+//     for(index in categorias){
+//         var cat = categorias[index]
+//         criarCardCategoria(cat)
+//     }
+// }
+
+// //Todos os cards
+// function criarCardProdutosRecomendados(produt){
+//     var listaRecomendados = document.querySelector('#lista-recomendados')
+//     var preco = formatarPreco(produt.preco)
+//     listaRecomendados.innerHTML= `
+//     <div class="card-recomendados">
+//         <img src="imagens/${produt.imagem}" alt="${produt.nome}" class="img-recomendados">
+//         <p class="texto-recomendados">${produt.nome}</p>
+//         <p class="preco-recomendados">${preco}</p>
+//     </div>
+//    `
+// }
+
+ 
+
+
+
+
+
+
+
+
+
+ // //formatar
+// function formatarPreco(preco){
 
     
-    return  preco.toLocaleString('pt-BR', {style: 'currency',
-    currency: 'BRL'})
-}
+//     return  preco.toLocaleString('pt-BR', {style: 'currency',
+//     currency: 'BRL'})
+// }
 
 
