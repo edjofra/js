@@ -2,6 +2,7 @@
 
 var ingredientes = ['mel', 'água', 'sal', 'mostarda']
 var modificado = []
+
 for(i in ingredientes){
 
     var letraGrande = ingredientes[i].charAt(0).toUpperCase()

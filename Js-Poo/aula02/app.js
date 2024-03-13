@@ -1,7 +1,7 @@
-//Devo modificar o vetor ingredientes[] para deixar todos os item com a primeira letra maiúscula e ordená-los em ordem alfabética -Abordagem Procedural 
+//Melhorando a organização do code:  Distiubuindo Responsabilidades/Papeis  definidos através de  funçoes (capitalizar,ordenar)
 
 var ingredientes = ['mel', 'água', 'sal', 'mostarda']
-var modificado = []
+
 
 function capitalizar(ingredientes){
     var modificado = []
@@ -15,10 +15,28 @@ function capitalizar(ingredientes){
     var resultado = `${letraGrande}${restoTexto}`
 
     modificado[i] = resultado
-    
-    return modificado
-}
-}
-console.log(capitalizar)
+    }
 
-//Funcionou em um caso pequeno e isolado, porém esse paradigma é inviável em grande/media escala, dificuldade em dar manuntenção, nãp reeuso e reaproveitamente de código.
+    return modificado 
+}
+
+
+function ordenar(ingredientes){
+    return ingredientes.sort(function(a,b){
+        return a.localeCompare(b)
+     })
+}
+
+// console.log(capitalizar(ingredientes))
+// console.log(ordenar(ingredientes))
+//Juntano esses dois resultados:
+
+var resultadoCapitalizado = capitalizar(ingredientes)
+var resultadoOrdenação = ordenar(resultadoCapitalizado)
+
+console.log(resultadoCapitalizado)
+console.log(resultadoOrdenação)
+//vetores ficaram iguais, a função ordenar modificou o vetor original capitalizado, não é o ideal, pois evetualmente pode ser que precise do var resultadoCapitalizado intacto.  
+
+
+
