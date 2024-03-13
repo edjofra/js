@@ -1,3 +1,6 @@
+
+//JEITO SEM FUNCTION
+
 //Devo modificar o vetor ingredientes[] para deixar todos os item com a primeira letra maiúscula e ordená-los em ordem alfabética -Abordagem Procedural 
 
 var ingredientes = ['mel', 'água', 'sal', 'mostarda']

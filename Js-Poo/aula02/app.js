@@ -1,3 +1,6 @@
+//JEITO COM FUNCTION, separando requisitos(dados) de métodos(açoes com os dados)
+
+
 //Melhorando a organização do code:  Distiubuindo Responsabilidades/Papeis  definidos através de  funçoes (capitalizar,ordenar)
 
 var ingredientes = ['mel', 'água', 'sal', 'mostarda']
@@ -6,15 +9,15 @@ var ingredientes = ['mel', 'água', 'sal', 'mostarda']
 function capitalizar(ingredientes){
     var modificado = []
     
-    for(i in ingredientes){
+    for(i = 0; i < ingredientes.length; i++){
    
-    var letraGrande = ingredientes[i].charAt(0).toUpperCase()
-    
-    var restoTexto = ingredientes[i].slice(1)
+        var letraGrande = ingredientes[i].charAt(0).toUpperCase()
+        
+        var restoTexto = ingredientes[i].slice(1)
 
-    var resultado = `${letraGrande}${restoTexto}`
+        var resultado = `${letraGrande}${restoTexto}`
 
-    modificado[i] = resultado
+        modificado[i] = resultado
     }
 
     return modificado 
