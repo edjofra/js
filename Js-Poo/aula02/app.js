@@ -1,4 +1,4 @@
-//JEITO COM FUNCTION, separando requisitos(dados) de métodos(açoes com os dados)
+//ATRIBUINDO RESPONSABILIDADES COM FUNCTION, separando requisitos(dados) de métodos(açoes com os dados)
 
 
 //Melhorando a organização do code:  Distiubuindo Responsabilidades/Papeis  definidos através de  funçoes (capitalizar,ordenar)
