@@ -24,6 +24,8 @@ function fnordenar(vetor){
 
 const familia = ['nandra', 'jojo', 'juju','de']
 const automoveis = ['carro', 'moto', 'onibus', 'biz', 'van']
+
+
 export default  {
     ordenar: fnordenar,
     capitalizar: fncapitalizar
