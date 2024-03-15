@@ -8,6 +8,6 @@ var ingredientes = ['mel', 'água', 'sal', 'mostarda']
 var resCapitalizado = modificado.capitalizar(ingredientes)
 var resOrdenado = modificado.ordenar(resCapitalizado)
 var resCaixaAlta = modificado.caixaAlta(resOrdenado)
-console.log( resCapitalizado)
-console.log( resOrdenado)
+console.log(resCapitalizado)
+console.log(resOrdenado)
 console.log(resCaixaAlta)
