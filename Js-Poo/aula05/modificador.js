@@ -4,9 +4,9 @@ function fnCapitalizar(vetor){
     
     for(let i in vetor){
        
-        var letraGrande = vetor[i].nome.charAt(0).toUpperCase()
+        var letraGrande = vetor[i].charAt(0).toUpperCase()
         
-        var restoTexto = vetor[i].nome.slice(1)
+        var restoTexto = vetor[i].slice(1)
 
         var resultado = `${letraGrande}${restoTexto}`
 
@@ -26,7 +26,7 @@ function fnCaixaAlta(vetor){
     let modificado = []
     
     for(let i in vetor){
-        modificado[i] = vetor[i].nome.toUpperCase()
+        modificado[i] = vetor[i].toUpperCase()
     }
     return modificado
 }

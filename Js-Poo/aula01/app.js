@@ -23,4 +23,4 @@ var ordenado = modificado.sort(function(a,b){
 
 console.log(ordenado)
 
-//Funcionou em um caso pequeno e isolado, porém esse paradigma é inviável em grande/media escala, dificuldade em dar manuntenção, nãp reeuso e reaproveitamente de código.
+//Funcionou em um caso pequeno e isolado, porém esse paradigma é inviável em grande/media escala, dificuldade em dar manuntenção, não reeuso e reaproveitamente de código.

@@ -1,6 +1,6 @@
 function fncapitalizar(vetor){
     var modificado = []
-    let k = 0// se tirar dá errp, ñ sei o motivo
+    let k = 0// se tirar dá erro, ñ sei o motivo(basta colocar um 'let k')
     for(k in vetor){
    
     var letraGrande = vetor[k].charAt(0).toUpperCase()

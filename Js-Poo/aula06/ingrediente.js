@@ -1,5 +1,5 @@
 
-var ingredientes = [
+var ingredientes = [// vetor de obj com várias propiedades
     {
         nome: 'mel',
         valor: 2.50
@@ -18,6 +18,7 @@ var ingredientes = [
     
 ]
 
-let salada = ['alface', 'tomate', 'sal', 'azeite']
+let salada = ['alface', 'tomate', 'sal', 'azeite']//vetor de string
 
-export {ingredientes, salada}
+export default ingredientes 
+export {salada}

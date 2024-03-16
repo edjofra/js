@@ -1,6 +1,6 @@
 //MODULARIZANDO, separando
 
-import xxx from "./mudador.js"// export default, exporta  uma única vez,  é tipo um obj de functions, importa sem {},nome xxx criado nessa pag., referencia o default e é usado antes da function especfica (xxx.fnyyy)
+import xxx from "./mudador.js"// export default, exporta  uma única vez,  é tipo um obj de functions; importa sem {};nome xxx criado nessa pag., referencia o default e é usado antes da function especfica (xxx.fnyyy)
 
 import { familia, automoveis} from "./mudador.js" // export normal, pode-se exportar vários, importar com {}, poderia coloca-lo dentro do default
 
