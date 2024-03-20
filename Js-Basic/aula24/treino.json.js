@@ -1,4 +1,4 @@
- var ingredientes = [
+var ingredientes = [
     {
         "codigo":0,
         "nome":"Burger Fogo Selvagem",
@@ -31,6 +31,35 @@
         "imagem":"burger_mediterraneo.png",
         "promocao":true,
         "disponivel":true
-    },
+    }
 ]
-export default ingredientes
+
+var produtos = [
+    {
+        nome: 'mel',
+        valor: 2.50
+    },
+
+    {
+        nome: 'água',
+        valor: 1.00
+
+    },
+    {
+        nome: 'mostarda',
+        valor: 3.20
+
+    },
+    
+]
+
+var x = JSON.stringify(produtos)
+
+console.log(produtos)
+console.log(x)
+
+var y = JSON.parse(x)
+console.log(y)
+
+var z = JSON.stringify(ingredientes)
+console.log(z)
