@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Modal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    
-    <button> Abrir Modal</button>
-    <dialog> 
-        <h2>Titulo</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione inventore doloribus id eos voluptatum temporibus similique accusantium perspiciatis, fugiat officiis exercitationem eligendi ducimus earum itaque minus doloremque quidem incidunt sapiente.</p>
-        <button>X</button>
-    </dialog>
-
-<script src="script.js"></script> 
+    <h1>JavaScript Modal</h1>
+   <button id="open-modal">Abrir</button>
+   <div id="fade" class="hide"></div>
+    <div id="modal"class="hide">
+        <div class="modal-header">
+            <h2>Este é o modal</h2>
+            <button id="close-modal">Fechar</button>
+        </div>
+        <div class="modal-body">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti praesentium maxime maiores voluptatem fuga  tenetur ducimus, reprehenderit commodi fugiat officiis, eligendi voluptatibus. Sequi, perferendis! Perspiciatis, quidem consectetur. Tenetur, eos voluptates?</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, odit? Quaerat accusamus expedita amet id, ipsa in aperiam nihil eligendi, numquam hic aspernatur neque aut. Voluptatibus qui distinctio quasi expedita!</p>
+        </div>
+    </div> 
 </body>
 </html>

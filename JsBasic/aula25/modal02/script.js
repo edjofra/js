@@ -1,10 +1,13 @@
-const butao = document.querySelector('button')
-const modal = document.querySelector('dialog')
-const butaoClose = document.querySelector('dialog button')
+const openModalButton = document.querySelector('#open-modal')
+const closeModalButton = document.querySelector('#close-modal')
+const modal = document.querySelector('#modal')
+const fade = document.querySelector('#fade')
 
-butao.onclick = function () {
-    modal.showModal()
+const toggleModal = () => {
+    modal.classList.toggle('hide')
+    fade.classList.toggle('hide')
 }
-butaoClose.onclick = function(){
-    modal.close()
-}
+
+[openModalButton, closeModalButton, fade].forEach(el => {
+    el.addEventListener('click', () => toggleModal())
+});
