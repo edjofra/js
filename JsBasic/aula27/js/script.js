@@ -1,4 +1,4 @@
-//criando um objeto
+//COPY
 class Validator {
     constructor(){
         this.validations = [
@@ -10,8 +10,8 @@ class Validator {
     validate(form){
         //pegar os imputs
         let inputs = form.getElementsByTagName('input')
+
         // pra ser possivel dá o looping, tenho q transofrma esse HTMLcollections em Array
-       
         let inputsArray = [...inputs]
         
         //loop nos iputs e validação no que for encontrado
@@ -25,11 +25,13 @@ class Validator {
             // valor do input 
                 let value = input.getAttribute(this.validations[i])
             
-            // invoque o metodo
+            // invoque o metodo genérico
                 this[metodo](input, value)
             }
         }
         },this)
+
+       
 
     }
     // met p verifica se o imput tem o numer de caractres
@@ -54,9 +56,6 @@ class Validator {
       inputParent.appendChild(template);
 
     }
-
-
-
 
 }
 
