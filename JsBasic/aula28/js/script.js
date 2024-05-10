@@ -27,13 +27,13 @@ class Calculator{
     processOperation(operation){
         //get Current and Previous values to operate
         let operationValue; 
-        const previous = +this.previousOperationText.innerText
-        const current = +this.currentOperationText.innerText
+        let previous = +this.previousOperationText.innerText
+        let current = +this.currentOperationText.innerText
 
         switch(operation){
             case '+':
-                operationValue = previous + current
-                this.updateScreen(operationValue, operation, current,previous)
+                result = previous + current
+                this.updateScreen(result, operation, current, previous)
                 break;
             default:
                 return;
@@ -44,14 +44,12 @@ class Calculator{
 
     // change de values of calc screen
     updateScreen(
-        operationValue = null, 
+       result = null, 
         operation = null, 
         current = null, 
         previous = null){
-            console.log(operationValue, operation, current, previous)
-       
-            this.currentOperationText.innerText += this.currentOperation
-        
+            this.currentOperationText.innerText += `${result} ${operation} ${current} ${previous}`
+           
     }
 
 }
@@ -63,6 +61,7 @@ buttons.forEach( (btn) => {
         const value = e.target.innerText
 
         if(+value >= 0 || value === '.'){
+            
            calc.addDigit(value)
         } else{
             calc.processOperation(value)
