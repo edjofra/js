@@ -2,6 +2,8 @@
 import './App.css';
 import SayMyName from './components/SayMyName';
 import Pessoa from './components/Pessoa';
+import HelloWorld from './components/HelloWorld';
+
 function App() {
 
   const name = 'De'
@@ -18,7 +20,7 @@ function App() {
     idade = '30' 
     profissao='empreendedora' 
     foto= {img}/></p>   
-     
+    
     </div>
   );
 }

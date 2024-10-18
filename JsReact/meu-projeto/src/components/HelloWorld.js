@@ -1,12 +1,11 @@
 
-import TextInside from "./TestoInside"
-
+import Frase from "./frase"
 function HelloWorld(){
 return(
     <div>
-    <p><TextInside/></p>
+    <p><Frase/></p>
     <h1>Hello via COmponents</h1>
-    <p><TextInside/></p>
+    <p><Frase/></p>
     </div>
 )
 }
