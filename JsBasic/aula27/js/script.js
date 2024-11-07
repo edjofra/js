@@ -20,7 +20,7 @@ class Validator {
             this.cleanValidations(currentValidations)
         }
         //pegar os imputs
-        let inputs = form.getElementsByTagName('input')
+        let inputs = document.getElementsByTagName('input')
 
         // pra ser possivel dá o looping, tenho q transofrma esse HTMLcollections em Array
         let inputsArray = [...inputs]
